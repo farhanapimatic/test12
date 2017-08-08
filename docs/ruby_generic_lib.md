@@ -480,7 +480,7 @@ def delete_order(order_id); end
 #### Example Usage
 
 ```ruby
-order_id = 49
+order_id = 14
 
 store.delete_order(order_id)
 
@@ -516,7 +516,7 @@ def get_order_by_id(order_id); end
 #### Example Usage
 
 ```ruby
-order_id = 49
+order_id = 14
 
 result = store.get_order_by_id(order_id)
 
@@ -632,7 +632,7 @@ def upload_file(pet_id,
 #### Example Usage
 
 ```ruby
-pet_id = 49
+pet_id = 14
 additional_metadata = 'additionalMetadata'
 file = Faraday::UploadIO.new('PathToFile', 'application/octet-stream')
 
@@ -662,7 +662,7 @@ def delete_pet(pet_id,
 #### Example Usage
 
 ```ruby
-pet_id = 49
+pet_id = 14
 api_key = 'api_key'
 
 pet.delete_pet(pet_id, api_key)
@@ -701,7 +701,7 @@ def update_pet_with_form(pet_id,
 #### Example Usage
 
 ```ruby
-pet_id = 7
+pet_id = 14
 name = 'name'
 status = 'status'
 
@@ -736,7 +736,7 @@ def get_pet_by_id(pet_id); end
 #### Example Usage
 
 ```ruby
-pet_id = 7
+pet_id = 14
 
 result = pet.get_pet_by_id(pet_id)
 

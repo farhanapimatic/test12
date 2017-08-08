@@ -589,7 +589,7 @@ function deleteOrder(orderId, callback)
 
 ```javascript
 
-    var orderId = 121;
+    var orderId = 127;
 
     controller.deleteOrder(orderId, function(error, response, context) {
 
@@ -629,7 +629,7 @@ function getOrderById(orderId, callback)
 
 ```javascript
 
-    var orderId = 121;
+    var orderId = 127;
 
     controller.getOrderById(orderId, function(error, response, context) {
 
@@ -756,7 +756,7 @@ function uploadFile(petId, additionalMetadata, file, callback)
 ```javascript
 
     TestHelper.getFilePath('url', function(data) {
-        var petId = 121;
+        var petId = 127;
     var additionalMetadata = 'additionalMetadata';
     var file = data;
 
@@ -789,7 +789,7 @@ function deletePet(petId, apiKey, callback)
 
 ```javascript
 
-    var petId = 121;
+    var petId = 127;
     var apiKey = api_key;
 
     controller.deletePet(petId, apiKey, function(error, response, context) {
@@ -830,7 +830,7 @@ function updatePetWithForm(petId, name, status, callback)
 
 ```javascript
 
-    var petId = 121;
+    var petId = 127;
     var name = 'name';
     var status = 'status';
 
@@ -869,7 +869,7 @@ function getPetById(petId, callback)
 
 ```javascript
 
-    var petId = 121;
+    var petId = 127;
 
     controller.getPetById(petId, function(error, response, context) {
 

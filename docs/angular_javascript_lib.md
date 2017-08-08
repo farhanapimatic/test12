@@ -884,7 +884,7 @@ function deleteOrder(orderId)
 
 
 	app.controller("testController", function($scope, StoreController){
-        var orderId = 163;
+        var orderId = 169;
 
 
 		var result = StoreController.deleteOrder(orderId);
@@ -934,7 +934,7 @@ function getOrderById(orderId)
 
 
 	app.controller("testController", function($scope, StoreController, Order){
-        var orderId = 163;
+        var orderId = 169;
 
 
 		var result = StoreController.getOrderById(orderId);
@@ -1091,7 +1091,7 @@ function uploadFile(petId, additionalMetadata, file)
 
 
 	app.controller("testController", function($scope, PetController, $http, ApiResponse){
-        var petId = 163;
+        var petId = 127;
         var additionalMetadata = 'additionalMetadata';
         var file = "";
 
@@ -1139,7 +1139,7 @@ function deletePet(petId, apiKey)
 
 
 	app.controller("testController", function($scope, PetController){
-        var petId = 163;
+        var petId = 127;
         var apiKey = api_key;
 
 
@@ -1190,7 +1190,7 @@ function updatePetWithForm(petId, name, status)
 
 
 	app.controller("testController", function($scope, PetController){
-        var petId = 163;
+        var petId = 127;
         var name = 'name';
         var status = 'status';
 
@@ -1239,7 +1239,7 @@ function getPetById(petId)
 
 
 	app.controller("testController", function($scope, PetController, Pet){
-        var petId = 163;
+        var petId = 127;
 
 
 		var result = PetController.getPetById(petId);

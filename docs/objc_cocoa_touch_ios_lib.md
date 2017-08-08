@@ -519,7 +519,7 @@ function deleteOrderAsyncWithOrderId:(long) orderId
 
 ```objc
     // Parameters for the API call
-    long orderId = 163;
+    long orderId = 169;
 
     [self.store deleteOrderAsyncWithOrderId: orderId  completionBlock:^(BOOL success, HttpContext* context, NSError* error) { 
        //Add code here
@@ -561,7 +561,7 @@ function getOrderByIdAsyncWithOrderId:(long) orderId
 
 ```objc
     // Parameters for the API call
-    long orderId = 163;
+    long orderId = 169;
 
     [self.store getOrderByIdAsyncWithOrderId: orderId  completionBlock:^(BOOL success, HttpContext* context, Order* response, NSError* error) { 
        //Add code here
@@ -692,7 +692,7 @@ function uploadFileAsyncWithPetId:(long) petId
 
 ```objc
     // Parameters for the API call
-    long petId = 163;
+    long petId = 169;
     NSString* additionalMetadata = @"additionalMetadata";
     NSURL* file = [NSURL URLWithString: @"pathtofile"];
 
@@ -728,7 +728,7 @@ function deletePetAsyncWithPetId:(long) petId
 
 ```objc
     // Parameters for the API call
-    long petId = 163;
+    long petId = 169;
     NSString* apiKey = @"api_key";
 
     [self.pet deletePetAsyncWithPetId: petId apiKey : apiKey  completionBlock:^(BOOL success, HttpContext* context, NSError* error) { 
@@ -773,7 +773,7 @@ function updatePetWithFormAsyncWithPetId:(long) petId
 
 ```objc
     // Parameters for the API call
-    long petId = 163;
+    long petId = 169;
     NSString* name = @"name";
     NSString* status = @"status";
 
@@ -814,7 +814,7 @@ function getPetByIdAsyncWithPetId:(long) petId
 
 ```objc
     // Parameters for the API call
-    long petId = 163;
+    long petId = 169;
 
     [self.pet getPetByIdAsyncWithPetId: petId  completionBlock:^(BOOL success, HttpContext* context, Pet* response, NSError* error) { 
        //Add code here

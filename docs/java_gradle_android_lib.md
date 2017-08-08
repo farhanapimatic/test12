@@ -647,7 +647,7 @@ void deleteOrderAsync(
 #### Example Usage
 
 ```java
-long orderId = 99;
+long orderId = 105;
 // Invoking the API call with sample inputs
 store.deleteOrderAsync(orderId, new APICallBack<void>() {
     public void onSuccess(HttpContext context, void response) {
@@ -692,7 +692,7 @@ void getOrderByIdAsync(
 #### Example Usage
 
 ```java
-long orderId = 99;
+long orderId = 105;
 // Invoking the API call with sample inputs
 store.getOrderByIdAsync(orderId, new APICallBack<Order>() {
     public void onSuccess(HttpContext context, Order response) {
@@ -839,7 +839,7 @@ void uploadFileAsync(
 #### Example Usage
 
 ```java
-long petId = 99;
+long petId = 63;
 String additionalMetadata = "additionalMetadata";
 File file = new File("PathToFile");
 // Invoking the API call with sample inputs
@@ -878,7 +878,7 @@ void deletePetAsync(
 #### Example Usage
 
 ```java
-long petId = 99;
+long petId = 63;
 String apiKey = "api_key";
 // Invoking the API call with sample inputs
 pet.deletePetAsync(petId, apiKey, new APICallBack<void>() {
@@ -926,7 +926,7 @@ void updatePetWithFormAsync(
 #### Example Usage
 
 ```java
-long petId = 99;
+long petId = 63;
 String name = "name";
 String status = "status";
 // Invoking the API call with sample inputs
@@ -970,7 +970,7 @@ void getPetByIdAsync(
 #### Example Usage
 
 ```java
-long petId = 99;
+long petId = 63;
 // Invoking the API call with sample inputs
 pet.getPetByIdAsync(petId, new APICallBack<Pet>() {
     public void onSuccess(HttpContext context, Pet response) {

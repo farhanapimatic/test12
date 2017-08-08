@@ -85,12 +85,12 @@ Raw
   {
     "username": "username",
     "email": "email",
-    "id": "190",
+    "id": "155",
     "firstName": "firstName",
     "lastName": "lastName",
     "password": "password",
     "phone": "phone",
-    "userStatus": 190
+    "userStatus": 155
   }
 ]
 ``` 
@@ -133,12 +133,12 @@ Raw
   {
     "username": "username",
     "email": "email",
-    "id": "190",
+    "id": "155",
     "firstName": "firstName",
     "lastName": "lastName",
     "password": "password",
     "phone": "phone",
-    "userStatus": 190
+    "userStatus": 155
   }
 ]
 ``` 
@@ -180,12 +180,12 @@ Raw
 {
   "username": "username",
   "email": "email",
-  "id": "190",
+  "id": "155",
   "firstName": "firstName",
   "lastName": "lastName",
   "password": "password",
   "phone": "phone",
-  "userStatus": 190
+  "userStatus": 155
 }
 ``` 
 
@@ -260,12 +260,12 @@ Raw
 {
   "username": "username",
   "email": "email",
-  "id": "190",
+  "id": "155",
   "firstName": "firstName",
   "lastName": "lastName",
   "password": "password",
   "phone": "phone",
-  "userStatus": 190
+  "userStatus": 155
 }
 ``` 
 
@@ -307,12 +307,12 @@ Body (_User_)
 {
   "username": "username",
   "email": "email",
-  "id": "190",
+  "id": "155",
   "firstName": "firstName",
   "lastName": "lastName",
   "password": "password",
   "phone": "phone",
-  "userStatus": 190
+  "userStatus": 155
 }
 ```
 
@@ -387,10 +387,10 @@ Raw
  Example 
 ``` 
 {
-  "id": "148",
-  "petId": "148",
-  "quantity": 148,
-  "shipDate": "2017-08-08T08:18:02.0874742Z",
+  "id": "155",
+  "petId": "155",
+  "quantity": 155,
+  "shipDate": "2017-08-08T09:26:37.1925085Z",
   "status": "placed",
   "complete": true
 }
@@ -403,10 +403,10 @@ Raw
 Body (_Order_) 
 ```
 {
-  "id": "148",
-  "petId": "148",
-  "quantity": 148,
-  "shipDate": "2017-08-08T08:18:02.0874742Z",
+  "id": "155",
+  "petId": "155",
+  "quantity": 155,
+  "shipDate": "2017-08-08T09:26:37.1925085Z",
   "status": "placed",
   "complete": true
 }
@@ -433,7 +433,7 @@ Body (_Order_)
 > successful operation
 Body (_number_) 
 ```
-148
+155
 ```
 
 
@@ -451,7 +451,7 @@ Body (_number_)
 #### Path Parameters
 | Parameter | Type | Tags | Description | Example |
 |-----------|------| ---- |-------------| ------- |
-| orderId | `long` |  ``` Required ```  | ID of the order that needs to be deleted | `148` | 
+| orderId | `long` |  ``` Required ```  | ID of the order that needs to be deleted | `155` | 
 
 #### Responses
 **200** 
@@ -480,7 +480,7 @@ Body (_number_)
 #### Path Parameters
 | Parameter | Type | Tags | Description | Example |
 |-----------|------| ---- |-------------| ------- |
-| orderId | `long` |  ``` Required ```  | ID of pet that needs to be fetched | `148` | 
+| orderId | `long` |  ``` Required ```  | ID of pet that needs to be fetched | `155` | 
 
 #### Responses
 **200** 
@@ -489,10 +489,10 @@ Body (_number_)
 Body (_Order_) 
 ```
 {
-  "id": "148",
-  "petId": "148",
-  "quantity": 148,
-  "shipDate": "2017-08-08T08:18:02.0874742Z",
+  "id": "155",
+  "petId": "155",
+  "quantity": 155,
+  "shipDate": "2017-08-08T09:26:37.1925085Z",
   "status": "placed",
   "complete": true
 }
@@ -538,14 +538,14 @@ Body (_Pet_)
     "photoUrls": [
       "photoUrls"
     ],
-    "id": "148",
+    "id": "155",
     "category": {
-      "id": "148",
+      "id": "155",
       "name": "name"
     },
     "tags": [
       {
-        "id": "148",
+        "id": "155",
         "name": "name"
       }
     ],
@@ -587,14 +587,14 @@ Raw
   "photoUrls": [
     "photoUrls"
   ],
-  "id": "148",
+  "id": "155",
   "category": {
-    "id": "148",
+    "id": "155",
     "name": "name"
   },
   "tags": [
     {
-      "id": "148",
+      "id": "155",
       "name": "name"
     }
   ],
@@ -624,7 +624,7 @@ Raw
 #### Path Parameters
 | Parameter | Type | Tags | Description | Example |
 |-----------|------| ---- |-------------| ------- |
-| petId | `long` |  ``` Required ```  | ID of pet to update | `148` | 
+| petId | `long` |  ``` Required ```  | ID of pet to update | `155` | 
 
 #### Request Headers
 >Content-Type=multipart/form-data;
@@ -644,7 +644,7 @@ Multipart Form Data
 Body (_ApiResponse_) 
 ```
 {
-  "code": 148,
+  "code": 155,
   "type": "type",
   "message": "message"
 }
@@ -663,7 +663,7 @@ Body (_ApiResponse_)
 #### Path Parameters
 | Parameter | Type | Tags | Description | Example |
 |-----------|------| ---- |-------------| ------- |
-| petId | `long` |  ``` Required ```  | Pet id to delete | `148` | 
+| petId | `long` |  ``` Required ```  | Pet id to delete | `155` | 
 
 #### Request Headers
 >api_key="api_key";
@@ -693,7 +693,7 @@ Body (_ApiResponse_)
 #### Path Parameters
 | Parameter | Type | Tags | Description | Example |
 |-----------|------| ---- |-------------| ------- |
-| petId | `long` |  ``` Required ```  | ID of pet that needs to be updated | `148` | 
+| petId | `long` |  ``` Required ```  | ID of pet that needs to be updated | `155` | 
 
 #### Request Headers
 >Content-Type=application/x-www-form-urlencoded;
@@ -728,7 +728,7 @@ Url Encoded
 #### Path Parameters
 | Parameter | Type | Tags | Description | Example |
 |-----------|------| ---- |-------------| ------- |
-| petId | `long` |  ``` Required ```  | ID of pet to return | `148` | 
+| petId | `long` |  ``` Required ```  | ID of pet to return | `155` | 
 
 #### Responses
 **200** 
@@ -741,14 +741,14 @@ Body (_Pet_)
   "photoUrls": [
     "photoUrls"
   ],
-  "id": "148",
+  "id": "155",
   "category": {
-    "id": "148",
+    "id": "155",
     "name": "name"
   },
   "tags": [
     {
-      "id": "148",
+      "id": "155",
       "name": "name"
     }
   ],
@@ -791,14 +791,14 @@ Body (_Pet_)
     "photoUrls": [
       "photoUrls"
     ],
-    "id": "148",
+    "id": "155",
     "category": {
-      "id": "148",
+      "id": "155",
       "name": "name"
     },
     "tags": [
       {
-        "id": "148",
+        "id": "155",
         "name": "name"
       }
     ],
@@ -840,14 +840,14 @@ Raw
   "photoUrls": [
     "photoUrls"
   ],
-  "id": "148",
+  "id": "155",
   "category": {
-    "id": "148",
+    "id": "155",
     "name": "name"
   },
   "tags": [
     {
-      "id": "148",
+      "id": "155",
       "name": "name"
     }
   ],

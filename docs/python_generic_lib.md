@@ -506,7 +506,7 @@ def delete_order(self,
 #### Example Usage
 
 ```python
-order_id = 7
+order_id = 14
 
 store_client.delete_order(order_id)
 
@@ -544,7 +544,7 @@ def get_order_by_id(self,
 #### Example Usage
 
 ```python
-order_id = 7
+order_id = 14
 
 result = store_client.get_order_by_id(order_id)
 
@@ -666,7 +666,7 @@ def upload_file(self,
 #### Example Usage
 
 ```python
-pet_id = 7
+pet_id = 14
 additional_metadata = 'additionalMetadata'
 file = open("pathtofile", 'rb')
 
@@ -697,7 +697,7 @@ def delete_pet(self,
 #### Example Usage
 
 ```python
-pet_id = 7
+pet_id = 14
 api_key = 'api_key'
 
 pet_client.delete_pet(pet_id, api_key)
@@ -738,7 +738,7 @@ def update_pet_with_form(self,
 #### Example Usage
 
 ```python
-pet_id = 7
+pet_id = 14
 name = 'name'
 status = 'status'
 
@@ -775,7 +775,7 @@ def get_pet_by_id(self,
 #### Example Usage
 
 ```python
-pet_id = 7
+pet_id = 14
 
 result = pet_client.get_pet_by_id(pet_id)
 

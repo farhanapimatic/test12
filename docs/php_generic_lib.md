@@ -568,7 +568,7 @@ function deleteOrder($orderId)
 #### Example Usage
 
 ```php
-$orderId = 190;
+$orderId = 63;
 
 $store->deleteOrder($orderId);
 
@@ -605,7 +605,7 @@ function getOrderById($orderId)
 #### Example Usage
 
 ```php
-$orderId = 190;
+$orderId = 63;
 
 $result = $store->getOrderById($orderId);
 
@@ -725,7 +725,7 @@ function uploadFile(
 #### Example Usage
 
 ```php
-$petId = 190;
+$petId = 63;
 $additionalMetadata = 'additionalMetadata';
 $file = "PathToFile";
 
@@ -757,7 +757,7 @@ function deletePet(
 #### Example Usage
 
 ```php
-$petId = 190;
+$petId = 63;
 $apiKey = 'api_key';
 
 $pet->deletePet($petId, $apiKey);
@@ -798,7 +798,7 @@ function updatePetWithForm(
 #### Example Usage
 
 ```php
-$petId = 190;
+$petId = 63;
 $name = 'name';
 $status = 'status';
 
@@ -834,7 +834,7 @@ function getPetById($petId)
 #### Example Usage
 
 ```php
-$petId = 190;
+$petId = 63;
 
 $result = $pet->getPetById($petId);
 

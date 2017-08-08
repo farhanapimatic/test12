@@ -458,7 +458,7 @@ Task DeleteOrder(long orderId)
 #### Example Usage
 
 ```csharp
-long orderId = 121;
+long orderId = 127;
 
 await store.DeleteOrder(orderId);
 
@@ -493,7 +493,7 @@ Task<Models.Order> GetOrderById(long orderId)
 #### Example Usage
 
 ```csharp
-long orderId = 121;
+long orderId = 127;
 
 Models.Order result = await store.GetOrderById(orderId);
 
@@ -604,7 +604,7 @@ Task<Models.ApiResponse> UploadFile(long petId, string additionalMetadata = null
 #### Example Usage
 
 ```csharp
-long petId = 121;
+long petId = 127;
 string additionalMetadata = "additionalMetadata";
 FileStreamInfo file = new FileStreamInfo(new FileStream(@"pathToFile",FileMode.Open));
 
@@ -633,7 +633,7 @@ Task DeletePet(long petId, string apiKey = null)
 #### Example Usage
 
 ```csharp
-long petId = 121;
+long petId = 127;
 string apiKey = "api_key";
 
 await pet.DeletePet(petId, apiKey);
@@ -669,7 +669,7 @@ Task UpdatePetWithForm(long petId, string name = null, string status = null)
 #### Example Usage
 
 ```csharp
-long petId = 121;
+long petId = 127;
 string name = "name";
 string status = "status";
 
@@ -703,7 +703,7 @@ Task<Models.Pet> GetPetById(long petId)
 #### Example Usage
 
 ```csharp
-long petId = 121;
+long petId = 127;
 
 Models.Pet result = await pet.GetPetById(petId);
 

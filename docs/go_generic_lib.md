@@ -510,7 +510,7 @@ func (me *STORE_IMPL) DeleteOrder(orderId int64)(,error)
 #### Example Usage
 
 ```go
-orderId,_ := strconv.ParseInt("7", 10, 8)
+orderId,_ := strconv.ParseInt("105", 10, 8)
 
 var result 
 result,_ = store.DeleteOrder(orderId)
@@ -547,7 +547,7 @@ func (me *STORE_IMPL) GetOrderById(orderId int64)(*models_pkg.Order,error)
 #### Example Usage
 
 ```go
-orderId,_ := strconv.ParseInt("7", 10, 8)
+orderId,_ := strconv.ParseInt("105", 10, 8)
 
 var result *models_pkg.Order
 result,_ = store.GetOrderById(orderId)
@@ -667,7 +667,7 @@ func (me *PET_IMPL) UploadFile(
 #### Example Usage
 
 ```go
-petId,_ := strconv.ParseInt("99", 10, 8)
+petId,_ := strconv.ParseInt("105", 10, 8)
 additionalMetadata := "additionalMetadata"
 file :=  []byte("")
 
@@ -699,7 +699,7 @@ func (me *PET_IMPL) DeletePet(
 #### Example Usage
 
 ```go
-petId,_ := strconv.ParseInt("99", 10, 8)
+petId,_ := strconv.ParseInt("105", 10, 8)
 apiKey := "api_key"
 
 var result 
@@ -740,7 +740,7 @@ func (me *PET_IMPL) UpdatePetWithForm(
 #### Example Usage
 
 ```go
-petId,_ := strconv.ParseInt("99", 10, 8)
+petId,_ := strconv.ParseInt("105", 10, 8)
 name := "name"
 status := "status"
 
@@ -776,7 +776,7 @@ func (me *PET_IMPL) GetPetById(petId int64)(*models_pkg.Pet,error)
 #### Example Usage
 
 ```go
-petId,_ := strconv.ParseInt("99", 10, 8)
+petId,_ := strconv.ParseInt("105", 10, 8)
 
 var result *models_pkg.Pet
 result,_ = pet.GetPetById(petId)
