@@ -1,7 +1,5 @@
 # Getting started
 
-This is a sample server Petstore server.  You can find out more about Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).  For this sample, you can use the api key `special-key` to test the authorization filters.
-
 ## How to Build
 
 The generated code has dependencies over external libraries like UniRest. These dependencies are defined in the ```composer.json``` file that comes with the SDK. 
@@ -12,7 +10,7 @@ Open command prompt and type ```composer --version```. This should display the c
 * Using command line, navigate to the directory containing the generated files (including ```composer.json```) for the SDK. 
 * Run the command ```composer install```. This should install all the required dependencies and create the ```vendor``` directory in your project directory.
 
-![Building SDK - Step 1](https://apidocs.io/illustration/php?step=installDependencies&workspaceFolder=Swagger%20Petstore-PHP)
+![Building SDK - Step 1](https://apidocs.io/illustration/php?step=installDependencies&workspaceFolder=BibcodeQuery-PHP)
 
 ### [For Windows Users Only] Configuring CURL Certificate Path in php.ini
 
@@ -30,35 +28,35 @@ CURL used to include a list of accepted CAs, but no longer bundles ANY CA certs.
 
 ## How to Use
 
-The following section explains how to use the SwaggerPetstore library in a new project.
+The following section explains how to use the BibcodeQuery library in a new project.
 
 ### 1. Open Project in an IDE
 
 Open an IDE for PHP like PhpStorm. The basic workflow presented here is also applicable if you prefer using a different editor or IDE.
 
-![Open project in PHPStorm - Step 1](https://apidocs.io/illustration/php?step=openIDE&workspaceFolder=Swagger%20Petstore-PHP)
+![Open project in PHPStorm - Step 1](https://apidocs.io/illustration/php?step=openIDE&workspaceFolder=BibcodeQuery-PHP)
 
 Click on ```Open``` in PhpStorm to browse to your generated SDK directory and then click ```OK```.
 
-![Open project in PHPStorm - Step 2](https://apidocs.io/illustration/php?step=openProject0&workspaceFolder=Swagger%20Petstore-PHP)     
+![Open project in PHPStorm - Step 2](https://apidocs.io/illustration/php?step=openProject0&workspaceFolder=BibcodeQuery-PHP)     
 
 ### 2. Add a new Test Project
 
 Create a new directory by right clicking on the solution name as shown below:
 
-![Add a new project in PHPStorm - Step 1](https://apidocs.io/illustration/php?step=createDirectory&workspaceFolder=Swagger%20Petstore-PHP)
+![Add a new project in PHPStorm - Step 1](https://apidocs.io/illustration/php?step=createDirectory&workspaceFolder=BibcodeQuery-PHP)
 
 Name the directory as "test"
 
-![Add a new project in PHPStorm - Step 2](https://apidocs.io/illustration/php?step=nameDirectory&workspaceFolder=Swagger%20Petstore-PHP)
+![Add a new project in PHPStorm - Step 2](https://apidocs.io/illustration/php?step=nameDirectory&workspaceFolder=BibcodeQuery-PHP)
    
 Add a PHP file to this project
 
-![Add a new project in PHPStorm - Step 3](https://apidocs.io/illustration/php?step=createFile&workspaceFolder=Swagger%20Petstore-PHP)
+![Add a new project in PHPStorm - Step 3](https://apidocs.io/illustration/php?step=createFile&workspaceFolder=BibcodeQuery-PHP)
 
 Name it "testSDK"
 
-![Add a new project in PHPStorm - Step 4](https://apidocs.io/illustration/php?step=nameFile&workspaceFolder=Swagger%20Petstore-PHP)
+![Add a new project in PHPStorm - Step 4](https://apidocs.io/illustration/php?step=nameFile&workspaceFolder=BibcodeQuery-PHP)
 
 Depending on your project setup, you might need to include composer's autoloader in your PHP code to enable auto loading of classes.
 
@@ -68,7 +66,7 @@ require_once "../vendor/autoload.php";
 
 It is important that the path inside require_once correctly points to the file ```autoload.php``` inside the vendor directory created during dependency installations.
 
-![Add a new project in PHPStorm - Step 4](https://apidocs.io/illustration/php?step=projectFiles&workspaceFolder=Swagger%20Petstore-PHP)
+![Add a new project in PHPStorm - Step 4](https://apidocs.io/illustration/php?step=projectFiles&workspaceFolder=BibcodeQuery-PHP)
 
 After this you can add code to initialize the client library and acquire the instance of a Controller class. Sample code to initialize the client library and using controller methods is given in the subsequent sections.
 
@@ -78,23 +76,23 @@ To run your project you must set the Interpreter for your project. Interpreter i
 
 Open ```Settings``` from ```File``` menu.
 
-![Run Test Project - Step 1](https://apidocs.io/illustration/php?step=openSettings&workspaceFolder=Swagger%20Petstore-PHP)
+![Run Test Project - Step 1](https://apidocs.io/illustration/php?step=openSettings&workspaceFolder=BibcodeQuery-PHP)
 
 Select ```PHP``` from within ```Languages & Frameworks```
 
-![Run Test Project - Step 2](https://apidocs.io/illustration/php?step=setInterpreter0&workspaceFolder=Swagger%20Petstore-PHP)
+![Run Test Project - Step 2](https://apidocs.io/illustration/php?step=setInterpreter0&workspaceFolder=BibcodeQuery-PHP)
 
 Browse for Interpreters near the ```Interpreter``` option and choose your interpreter.
 
-![Run Test Project - Step 3](https://apidocs.io/illustration/php?step=setInterpreter1&workspaceFolder=Swagger%20Petstore-PHP)
+![Run Test Project - Step 3](https://apidocs.io/illustration/php?step=setInterpreter1&workspaceFolder=BibcodeQuery-PHP)
 
 Once the interpreter is selected, click ```OK```
 
-![Run Test Project - Step 4](https://apidocs.io/illustration/php?step=setInterpreter2&workspaceFolder=Swagger%20Petstore-PHP)
+![Run Test Project - Step 4](https://apidocs.io/illustration/php?step=setInterpreter2&workspaceFolder=BibcodeQuery-PHP)
 
 To run your project, right click on your PHP file inside your Test project and click on ```Run```
 
-![Run Test Project - Step 5](https://apidocs.io/illustration/php?step=runProject&workspaceFolder=Swagger%20Petstore-PHP)
+![Run Test Project - Step 5](https://apidocs.io/illustration/php?step=runProject&workspaceFolder=BibcodeQuery-PHP)
 
 ## How to Test
 
@@ -114,7 +112,7 @@ In order to setup authentication and initialization of the API client, you need 
 | Parameter | Description |
 |-----------|-------------|
 | oAuthClientId | OAuth 2 Client ID |
-| oAuthRedirectUri | OAuth 2 Redirection endpoint or Callback Uri |
+| oAuthClientSecret | OAuth 2 Client Secret |
 
 
 
@@ -122,51 +120,96 @@ API client can be initialized as following.
 
 ```php
 $oAuthClientId = 'oAuthClientId'; // OAuth 2 Client ID
-$oAuthRedirectUri = 'https://example.com/oauth/callback'; // OAuth 2 Redirection endpoint or Callback Uri
+$oAuthClientSecret = 'oAuthClientSecret'; // OAuth 2 Client Secret
 
-$client = new SwaggerPetstoreLib\SwaggerPetstoreClient($oAuthClientId, $oAuthRedirectUri);
+$client = new BibcodeQueryLib\BibcodeQueryClient($oAuthClientId, $oAuthClientSecret);
 ```
 
 You must authorize now authorize the client.
 
 ### Authorizing your client
 
-Your application must obtain user authorization before it can execute an endpoint call.
-The SDK uses *OAuth 2.0 Implicit Grant* to obtain a user's consent to perform an API request on user's behalf.
+This SDK uses *OAuth 2.0 authorization* to authorize the client.
 
-This process requires the presence of a client-side JavaScript code on the redirect URI page to 
-receive the *access token* after the consent step is completed.
+The `authorize()` method will exchange the OAuth client credentials for an *access token*.
+The access token is an object containing information for authorizing client requests.
 
-#### 1. Obtain consent
-
-To obtain user's consent, you must redirect the user to the authorization page.
-The `buildAuthorizationUrl()` method creates the URL to the authorization page.
  You must pass the *[scopes](#scopes)* for which you need permission to access.
 ```php
-$authUrl = $client->auth()->buildAuthorizationUrl([OAuthScopeEnum::WRITEPETS, OAuthScopeEnum::READPETS]);
-header('Location: ' . filter_var($authUrl, FILTER_SANITIZE_URL));
+try {
+    $client->auth()->authorize([OAuthScopeEnum::FDG, OAuthScopeEnum::DFG]);
+} catch (BibcodeQueryLib\Exceptions\OAuthProviderException $ex) {
+    // handle exception
+}
 ```
 
-#### 2. Handle the OAuth server response
+The client can now make authorized endpoint calls.
 
-Once the user responds to the consent request, the OAuth 2.0 server responds to your application's access request by redirecting the user to the redirect URI specified set in `Configuration`.
-
-The redirect URI will receive the *access token* as the `access_token` argument in the URL fragment.
-
-```
-https://example.com/oauth/callback#access_token=XXXXXXXXXXXXXXXXXXXXXXXXX
-```
-
-The access token must be extracted by the client-side JavaScript code. The access token can be used to authorize any further endpoint calls by the JavaScript code.
 
 ### Scopes
 
-Scopes enable your application to only request access to the resources it needs while enabling users to control the amount of access they grant to your application. Available scopes are defined in the `SwaggerPetstoreLib\Models\OAuthScopeEnum` enumeration.
+Scopes enable your application to only request access to the resources it needs while enabling users to control the amount of access they grant to your application. Available scopes are defined in the `BibcodeQueryLib\Models\OAuthScopeEnum` enumeration.
 
 | Scope Name | Description |
 | --- | --- |
-| `WRITEPETS` | modify pets in your account |
-| `READPETS` | read your pets |
+| `FDG` |  |
+| `DFG` |  |
+
+### Storing an access token for reuse
+
+It is recommended that you store the access token for reuse.
+
+You can store the access token in the `$_SESSION` global:
+
+```php
+// store token
+$_SESSION['access_token'] = BibcodeQueryLib\Configuration::$oAuthToken;
+```
+
+### Creating a client from a stored token
+
+To authorize a client from a stored access token, just set the access token in `Configuration` along with the other configuration parameters before creating the client:
+
+```php
+// load token later...
+BibcodeQueryLib\Configuration::$oAuthToken = $_SESSION['access_token'];
+
+// Set other configuration, then instantiate client
+$client = new BibcodeQueryLib\BibcodeQueryClient();
+```
+
+### Complete example
+
+```php
+<?php
+require_once __DIR__.'/vendor/autoload.php';
+
+use BibcodeQueryLib\Models\OAuthScopeEnum;
+
+session_start();
+
+// Client configuration
+$oAuthClientId = 'oAuthClientId';
+$oAuthClientSecret = 'oAuthClientSecret';
+
+$client = new BibcodeQueryLib\BibcodeQueryClient($oAuthClientId, $oAuthClientSecret);
+
+// try to restore access token from session
+if (isset($_SESSION['access_token']) && $_SESSION['access_token']) {
+    BibcodeQueryLib\Configuration::$oAuthToken = $_SESSION['access_token'];
+} else {
+    try {
+        // obtain a new access token
+        $token = $client->auth()->authorize([OAuthScopeEnum::FDG, OAuthScopeEnum::DFG]);
+        $_SESSION['access_token'] = $token;
+    } catch (BibcodeQueryLib\Exceptions\OAuthProviderException $ex) {
+        // handle exception
+        die();
+    }
+}
+
+// the client is now authorized; you can use $client to make endpoint calls
+```
 
 
 
@@ -174,349 +217,101 @@ Scopes enable your application to only request access to the resources it needs 
 
 ## <a name="list_of_controllers"></a>List of Controllers
 
-* [UserController](#user_controller)
-* [StoreController](#store_controller)
-* [PetController](#pet_controller)
+* [BibcodeQueryBindingController](#bibcode_query_binding_controller)
+* [OAuthAuthorizationController](#o_auth_authorization_controller)
 
-## <a name="user_controller"></a>![Class: ](https://apidocs.io/img/class.png ".UserController") UserController
+## <a name="bibcode_query_binding_controller"></a>![Class: ](https://apidocs.io/img/class.png ".BibcodeQueryBindingController") BibcodeQueryBindingController
 
 ### Get singleton instance
 
-The singleton instance of the ``` UserController ``` class can be accessed from the API Client.
+The singleton instance of the ``` BibcodeQueryBindingController ``` class can be accessed from the API Client.
 
 ```php
-$user = $client->getUser();
+$bibcodeQueryBinding = $client->getBibcodeQueryBinding();
 ```
 
-### <a name="get_logout_user"></a>![Method: ](https://apidocs.io/img/method.png ".UserController.getLogoutUser") getLogoutUser
+### <a name="get_bibcode"></a>![Method: ](https://apidocs.io/img/method.png ".BibcodeQueryBindingController.getBibcode") getBibcode
 
 > *Tags:*  ``` Skips Authentication ``` 
 
-> Logs out current logged in user session
+> TODO: Add a method description
 
 
 ```php
-function getLogoutUser()
-```
-
-#### Example Usage
-
-```php
-
-$user->getLogoutUser();
-
-```
-
-#### Errors
-
-| Error Code | Error Description |
-|------------|-------------------|
-| 0 | successful operation |
-
-
-
-### <a name="create_users_with_list_input"></a>![Method: ](https://apidocs.io/img/method.png ".UserController.createUsersWithListInput") createUsersWithListInput
-
-> *Tags:*  ``` Skips Authentication ``` 
-
-> Creates list of users with given input array
-
-
-```php
-function createUsersWithListInput($body)
+function getBibcode(
+        $bibcode,
+        $dbKey,
+        $dataType)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| body |  ``` Required ```  ``` Collection ```  | List of user object |
+| bibcode |  ``` Required ```  | TODO: Add a parameter description |
+| dbKey |  ``` Required ```  | TODO: Add a parameter description |
+| dataType |  ``` Required ```  | TODO: Add a parameter description |
 
 
 
 #### Example Usage
 
 ```php
-$user = new User();
-$body = array($user);
+$bibcode = 'bibcode';
+$dbKey = 'db_key';
+$dataType = 'data_type';
 
-$user->createUsersWithListInput($body);
-
-```
-
-#### Errors
-
-| Error Code | Error Description |
-|------------|-------------------|
-| 0 | successful operation |
-
-
-
-### <a name="create_users_with_array_input"></a>![Method: ](https://apidocs.io/img/method.png ".UserController.createUsersWithArrayInput") createUsersWithArrayInput
-
-> *Tags:*  ``` Skips Authentication ``` 
-
-> Creates list of users with given input array
-
-
-```php
-function createUsersWithArrayInput($body)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  ``` Collection ```  | List of user object |
-
-
-
-#### Example Usage
-
-```php
-$user = new User();
-$body = array($user);
-
-$user->createUsersWithArrayInput($body);
+$result = $bibcodeQueryBinding->getBibcode($bibcode, $dbKey, $dataType);
 
 ```
-
-#### Errors
-
-| Error Code | Error Description |
-|------------|-------------------|
-| 0 | successful operation |
-
-
-
-### <a name="create_user"></a>![Method: ](https://apidocs.io/img/method.png ".UserController.createUser") createUser
-
-> *Tags:*  ``` Skips Authentication ``` 
-
-> Create user
-
-
-```php
-function createUser($body)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | Created user object |
-
-
-
-#### Example Usage
-
-```php
-$body = new User();
-
-$user->createUser($body);
-
-```
-
-#### Errors
-
-| Error Code | Error Description |
-|------------|-------------------|
-| 0 | successful operation |
-
-
-
-### <a name="delete_user"></a>![Method: ](https://apidocs.io/img/method.png ".UserController.deleteUser") deleteUser
-
-> *Tags:*  ``` Skips Authentication ``` 
-
-> Delete user
-
-
-```php
-function deleteUser($username)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| username |  ``` Required ```  | The name that needs to be deleted |
-
-
-
-#### Example Usage
-
-```php
-$username = 'username';
-
-$user->deleteUser($username);
-
-```
-
-#### Errors
-
-| Error Code | Error Description |
-|------------|-------------------|
-| 400 | Invalid username supplied |
-| 404 | User not found |
-
-
-
-### <a name="update_user"></a>![Method: ](https://apidocs.io/img/method.png ".UserController.updateUser") updateUser
-
-> *Tags:*  ``` Skips Authentication ``` 
-
-> Updated user
-
-
-```php
-function updateUser(
-        $username,
-        $body)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| username |  ``` Required ```  | name that need to be updated |
-| body |  ``` Required ```  | Updated user object |
-
-
-
-#### Example Usage
-
-```php
-$username = 'username';
-$body = new User();
-
-$user->updateUser($username, $body);
-
-```
-
-#### Errors
-
-| Error Code | Error Description |
-|------------|-------------------|
-| 400 | Invalid user supplied |
-| 404 | User not found |
-
-
-
-### <a name="get_user_by_name"></a>![Method: ](https://apidocs.io/img/method.png ".UserController.getUserByName") getUserByName
-
-> *Tags:*  ``` Skips Authentication ``` 
-
-> Get user by user name
-
-
-```php
-function getUserByName($username)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| username |  ``` Required ```  | The name that needs to be fetched. Use user1 for testing. |
-
-
-
-#### Example Usage
-
-```php
-$username = 'username';
-
-$result = $user->getUserByName($username);
-
-```
-
-#### Errors
-
-| Error Code | Error Description |
-|------------|-------------------|
-| 400 | Invalid username supplied |
-| 404 | User not found |
-
-
-
-### <a name="get_login_user"></a>![Method: ](https://apidocs.io/img/method.png ".UserController.getLoginUser") getLoginUser
-
-> *Tags:*  ``` Skips Authentication ``` 
-
-> Logs user into the system
-
-
-```php
-function getLoginUser(
-        $username,
-        $password)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| username |  ``` Required ```  | The user name for login |
-| password |  ``` Required ```  | The password for login in clear text |
-
-
-
-#### Example Usage
-
-```php
-$username = 'username';
-$password = 'password';
-
-$result = $user->getLoginUser($username, $password);
-
-```
-
-#### Errors
-
-| Error Code | Error Description |
-|------------|-------------------|
-| 400 | Invalid username/password supplied |
-
 
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="store_controller"></a>![Class: ](https://apidocs.io/img/class.png ".StoreController") StoreController
+## <a name="o_auth_authorization_controller"></a>![Class: ](https://apidocs.io/img/class.png ".OAuthAuthorizationController") OAuthAuthorizationController
 
 ### Get singleton instance
 
-The singleton instance of the ``` StoreController ``` class can be accessed from the API Client.
+The singleton instance of the ``` OAuthAuthorizationController ``` class can be accessed from the API Client.
 
 ```php
-$store = $client->getStore();
+$oAuthAuthorization = $client->getOAuthAuthorization();
 ```
 
-### <a name="create_place_order"></a>![Method: ](https://apidocs.io/img/method.png ".StoreController.createPlaceOrder") createPlaceOrder
+### <a name="create_request_token"></a>![Method: ](https://apidocs.io/img/method.png ".OAuthAuthorizationController.createRequestToken") createRequestToken
 
 > *Tags:*  ``` Skips Authentication ``` 
 
-> Place an order for a pet
+> Create a new OAuth 2 token.
 
 
 ```php
-function createPlaceOrder($body)
+function createRequestToken(
+        $authorization,
+        $scope = null,
+        $fieldParameters = null)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| body |  ``` Required ```  | order placed for purchasing the pet |
+| authorization |  ``` Required ```  | Authorization header in Basic auth format |
+| scope |  ``` Optional ```  | Requested scopes as a space-delimited list. |
+| fieldParameters | ``` Optional ``` | Additional optional form parameters are supported by this method |
 
 
 
 #### Example Usage
 
 ```php
-$body = new Order();
+$authorization = 'Authorization';
+$scope = 'scope';
+// key-value map for optional form parameters
+$formParams = array('key' => 'value');
 
-$result = $store->createPlaceOrder($body);
+
+$result = $oAuthAuthorization->createRequestToken($authorization, $scope, $formParams);
 
 ```
 
@@ -524,53 +319,45 @@ $result = $store->createPlaceOrder($body);
 
 | Error Code | Error Description |
 |------------|-------------------|
-| 400 | Invalid Order |
+| 400 | OAuth 2 provider returned an error. |
+| 401 | OAuth 2 provider says client authentication failed. |
 
 
 
-### <a name="get_inventory"></a>![Method: ](https://apidocs.io/img/method.png ".StoreController.getInventory") getInventory
-
-> Returns pet inventories by status
-
-
-```php
-function getInventory()
-```
-
-#### Example Usage
-
-```php
-
-$result = $store->getInventory();
-
-```
-
-
-### <a name="delete_order"></a>![Method: ](https://apidocs.io/img/method.png ".StoreController.deleteOrder") deleteOrder
+### <a name="create_request_token1"></a>![Method: ](https://apidocs.io/img/method.png ".OAuthAuthorizationController.createRequestToken1") createRequestToken1
 
 > *Tags:*  ``` Skips Authentication ``` 
 
-> Delete purchase order by ID
+> Create a new OAuth 2 token.
 
 
 ```php
-function deleteOrder($orderId)
+function createRequestToken1(
+        $authorization,
+        $scope = null,
+        $fieldParameters = null)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| orderId |  ``` Required ```  | ID of the order that needs to be deleted |
+| authorization |  ``` Required ```  | Authorization header in Basic auth format |
+| scope |  ``` Optional ```  | Requested scopes as a space-delimited list. |
+| fieldParameters | ``` Optional ``` | Additional optional form parameters are supported by this method |
 
 
 
 #### Example Usage
 
 ```php
-$orderId = 63;
+$authorization = 'Authorization';
+$scope = 'scope';
+// key-value map for optional form parameters
+$formParams = array('key' => 'value');
 
-$store->deleteOrder($orderId);
+
+$result = $oAuthAuthorization->createRequestToken1($authorization, $scope, $formParams);
 
 ```
 
@@ -578,36 +365,45 @@ $store->deleteOrder($orderId);
 
 | Error Code | Error Description |
 |------------|-------------------|
-| 400 | Invalid ID supplied |
-| 404 | Order not found |
+| 400 | OAuth 2 provider returned an error. |
+| 401 | OAuth 2 provider says client authentication failed. |
 
 
 
-### <a name="get_order_by_id"></a>![Method: ](https://apidocs.io/img/method.png ".StoreController.getOrderById") getOrderById
+### <a name="create_request_token2"></a>![Method: ](https://apidocs.io/img/method.png ".OAuthAuthorizationController.createRequestToken2") createRequestToken2
 
 > *Tags:*  ``` Skips Authentication ``` 
 
-> Find purchase order by ID
+> Create a new OAuth 2 token.
 
 
 ```php
-function getOrderById($orderId)
+function createRequestToken2(
+        $authorization,
+        $scope = null,
+        $fieldParameters = null)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| orderId |  ``` Required ```  | ID of pet that needs to be fetched |
+| authorization |  ``` Required ```  | Authorization header in Basic auth format |
+| scope |  ``` Optional ```  | Requested scopes as a space-delimited list. |
+| fieldParameters | ``` Optional ``` | Additional optional form parameters are supported by this method |
 
 
 
 #### Example Usage
 
 ```php
-$orderId = 63;
+$authorization = 'Authorization';
+$scope = 'scope';
+// key-value map for optional form parameters
+$formParams = array('key' => 'value');
 
-$result = $store->getOrderById($orderId);
+
+$result = $oAuthAuthorization->createRequestToken2($authorization, $scope, $formParams);
 
 ```
 
@@ -615,46 +411,45 @@ $result = $store->getOrderById($orderId);
 
 | Error Code | Error Description |
 |------------|-------------------|
-| 400 | Invalid ID supplied |
-| 404 | Order not found |
+| 400 | OAuth 2 provider returned an error. |
+| 401 | OAuth 2 provider says client authentication failed. |
 
 
 
-[Back to List of Controllers](#list_of_controllers)
+### <a name="create_request_token11"></a>![Method: ](https://apidocs.io/img/method.png ".OAuthAuthorizationController.createRequestToken11") createRequestToken11
 
-## <a name="pet_controller"></a>![Class: ](https://apidocs.io/img/class.png ".PetController") PetController
+> *Tags:*  ``` Skips Authentication ``` 
 
-### Get singleton instance
-
-The singleton instance of the ``` PetController ``` class can be accessed from the API Client.
-
-```php
-$pet = $client->getPet();
-```
-
-### <a name="find_pets_by_tags"></a>![Method: ](https://apidocs.io/img/method.png ".PetController.findPetsByTags") findPetsByTags
-
-> Finds Pets by tags
+> Create a new OAuth 2 token.
 
 
 ```php
-function findPetsByTags($tags)
+function createRequestToken11(
+        $authorization,
+        $scope = null,
+        $fieldParameters = null)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| tags |  ``` Required ```  ``` Collection ```  | Tags to filter by |
+| authorization |  ``` Required ```  | Authorization header in Basic auth format |
+| scope |  ``` Optional ```  | Requested scopes as a space-delimited list. |
+| fieldParameters | ``` Optional ``` | Additional optional form parameters are supported by this method |
 
 
 
 #### Example Usage
 
 ```php
-$tags = array('tags');
+$authorization = 'Authorization';
+$scope = 'scope';
+// key-value map for optional form parameters
+$formParams = array('key' => 'value');
 
-$result = $pet->findPetsByTags($tags);
+
+$result = $oAuthAuthorization->createRequestToken11($authorization, $scope, $formParams);
 
 ```
 
@@ -662,33 +457,45 @@ $result = $pet->findPetsByTags($tags);
 
 | Error Code | Error Description |
 |------------|-------------------|
-| 400 | Invalid tag value |
+| 400 | OAuth 2 provider returned an error. |
+| 401 | OAuth 2 provider says client authentication failed. |
 
 
 
-### <a name="add_pet"></a>![Method: ](https://apidocs.io/img/method.png ".PetController.addPet") addPet
+### <a name="create_request_token21"></a>![Method: ](https://apidocs.io/img/method.png ".OAuthAuthorizationController.createRequestToken21") createRequestToken21
 
-> Add a new pet to the store
+> *Tags:*  ``` Skips Authentication ``` 
+
+> Create a new OAuth 2 token.
 
 
 ```php
-function addPet($body)
+function createRequestToken21(
+        $authorization,
+        $scope = null,
+        $fieldParameters = null)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| body |  ``` Required ```  | Pet object that needs to be added to the store |
+| authorization |  ``` Required ```  | Authorization header in Basic auth format |
+| scope |  ``` Optional ```  | Requested scopes as a space-delimited list. |
+| fieldParameters | ``` Optional ``` | Additional optional form parameters are supported by this method |
 
 
 
 #### Example Usage
 
 ```php
-$body = new Pet();
+$authorization = 'Authorization';
+$scope = 'scope';
+// key-value map for optional form parameters
+$formParams = array('key' => 'value');
 
-$pet->addPet($body);
+
+$result = $oAuthAuthorization->createRequestToken21($authorization, $scope, $formParams);
 
 ```
 
@@ -696,71 +503,45 @@ $pet->addPet($body);
 
 | Error Code | Error Description |
 |------------|-------------------|
-| 405 | Invalid input |
+| 400 | OAuth 2 provider returned an error. |
+| 401 | OAuth 2 provider says client authentication failed. |
 
 
 
-### <a name="upload_file"></a>![Method: ](https://apidocs.io/img/method.png ".PetController.uploadFile") uploadFile
+### <a name="create_request_token11"></a>![Method: ](https://apidocs.io/img/method.png ".OAuthAuthorizationController.createRequestToken11") createRequestToken11
 
-> uploads an image
+> *Tags:*  ``` Skips Authentication ``` 
+
+> Create a new OAuth 2 token.
 
 
 ```php
-function uploadFile(
-        $petId,
-        $additionalMetadata = null,
-        $file = null)
+function createRequestToken11(
+        $authorization,
+        $scope = null,
+        $fieldParameters = null)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| petId |  ``` Required ```  | ID of pet to update |
-| additionalMetadata |  ``` Optional ```  | Additional data to pass to server |
-| file |  ``` Optional ```  | file to upload |
+| authorization |  ``` Required ```  | Authorization header in Basic auth format |
+| scope |  ``` Optional ```  | Requested scopes as a space-delimited list. |
+| fieldParameters | ``` Optional ``` | Additional optional form parameters are supported by this method |
 
 
 
 #### Example Usage
 
 ```php
-$petId = 63;
-$additionalMetadata = 'additionalMetadata';
-$file = "PathToFile";
-
-$result = $pet->uploadFile($petId, $additionalMetadata, $file);
-
-```
+$authorization = 'Authorization';
+$scope = 'scope';
+// key-value map for optional form parameters
+$formParams = array('key' => 'value');
 
 
-### <a name="delete_pet"></a>![Method: ](https://apidocs.io/img/method.png ".PetController.deletePet") deletePet
-
-> Deletes a pet
-
-
-```php
-function deletePet(
-        $petId,
-        $apiKey = null)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| petId |  ``` Required ```  | Pet id to delete |
-| apiKey |  ``` Optional ```  | TODO: Add a parameter description |
-
-
-
-#### Example Usage
-
-```php
-$petId = 63;
-$apiKey = 'api_key';
-
-$pet->deletePet($petId, $apiKey);
+$result = $oAuthAuthorization->createRequestToken11($authorization, $scope, $formParams);
 
 ```
 
@@ -768,41 +549,45 @@ $pet->deletePet($petId, $apiKey);
 
 | Error Code | Error Description |
 |------------|-------------------|
-| 400 | Invalid ID supplied |
-| 404 | Pet not found |
+| 400 | OAuth 2 provider returned an error. |
+| 401 | OAuth 2 provider says client authentication failed. |
 
 
 
-### <a name="update_pet_with_form"></a>![Method: ](https://apidocs.io/img/method.png ".PetController.updatePetWithForm") updatePetWithForm
+### <a name="create_request_token1"></a>![Method: ](https://apidocs.io/img/method.png ".OAuthAuthorizationController.createRequestToken1") createRequestToken1
 
-> Updates a pet in the store with form data
+> *Tags:*  ``` Skips Authentication ``` 
+
+> Create a new OAuth 2 token.
 
 
 ```php
-function updatePetWithForm(
-        $petId,
-        $name = null,
-        $status = null)
+function createRequestToken1(
+        $authorization,
+        $scope = null,
+        $fieldParameters = null)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| petId |  ``` Required ```  | ID of pet that needs to be updated |
-| name |  ``` Optional ```  | Updated name of the pet |
-| status |  ``` Optional ```  | Updated status of the pet |
+| authorization |  ``` Required ```  | Authorization header in Basic auth format |
+| scope |  ``` Optional ```  | Requested scopes as a space-delimited list. |
+| fieldParameters | ``` Optional ``` | Additional optional form parameters are supported by this method |
 
 
 
 #### Example Usage
 
 ```php
-$petId = 63;
-$name = 'name';
-$status = 'status';
+$authorization = 'Authorization';
+$scope = 'scope';
+// key-value map for optional form parameters
+$formParams = array('key' => 'value');
 
-$pet->updatePetWithForm($petId, $name, $status);
+
+$result = $oAuthAuthorization->createRequestToken1($authorization, $scope, $formParams);
 
 ```
 
@@ -810,33 +595,45 @@ $pet->updatePetWithForm($petId, $name, $status);
 
 | Error Code | Error Description |
 |------------|-------------------|
-| 405 | Invalid input |
+| 400 | OAuth 2 provider returned an error. |
+| 401 | OAuth 2 provider says client authentication failed. |
 
 
 
-### <a name="get_pet_by_id"></a>![Method: ](https://apidocs.io/img/method.png ".PetController.getPetById") getPetById
+### <a name="create_request_token2"></a>![Method: ](https://apidocs.io/img/method.png ".OAuthAuthorizationController.createRequestToken2") createRequestToken2
 
-> Find pet by ID
+> *Tags:*  ``` Skips Authentication ``` 
+
+> Create a new OAuth 2 token.
 
 
 ```php
-function getPetById($petId)
+function createRequestToken2(
+        $authorization,
+        $scope = null,
+        $fieldParameters = null)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| petId |  ``` Required ```  | ID of pet to return |
+| authorization |  ``` Required ```  | Authorization header in Basic auth format |
+| scope |  ``` Optional ```  | Requested scopes as a space-delimited list. |
+| fieldParameters | ``` Optional ``` | Additional optional form parameters are supported by this method |
 
 
 
 #### Example Usage
 
 ```php
-$petId = 63;
+$authorization = 'Authorization';
+$scope = 'scope';
+// key-value map for optional form parameters
+$formParams = array('key' => 'value');
 
-$result = $pet->getPetById($petId);
+
+$result = $oAuthAuthorization->createRequestToken2($authorization, $scope, $formParams);
 
 ```
 
@@ -844,34 +641,45 @@ $result = $pet->getPetById($petId);
 
 | Error Code | Error Description |
 |------------|-------------------|
-| 400 | Invalid ID supplied |
-| 404 | Pet not found |
+| 400 | OAuth 2 provider returned an error. |
+| 401 | OAuth 2 provider says client authentication failed. |
 
 
 
-### <a name="find_pets_by_status"></a>![Method: ](https://apidocs.io/img/method.png ".PetController.findPetsByStatus") findPetsByStatus
+### <a name="create_request_token3"></a>![Method: ](https://apidocs.io/img/method.png ".OAuthAuthorizationController.createRequestToken3") createRequestToken3
 
-> Finds Pets by status
+> *Tags:*  ``` Skips Authentication ``` 
+
+> Create a new OAuth 2 token.
 
 
 ```php
-function findPetsByStatus($status)
+function createRequestToken3(
+        $authorization,
+        $scope = null,
+        $fieldParameters = null)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| status |  ``` Required ```  ``` Collection ```  | Status values that need to be considered for filter |
+| authorization |  ``` Required ```  | Authorization header in Basic auth format |
+| scope |  ``` Optional ```  | Requested scopes as a space-delimited list. |
+| fieldParameters | ``` Optional ``` | Additional optional form parameters are supported by this method |
 
 
 
 #### Example Usage
 
 ```php
-$status = array(Status7::AVAILABLE);
+$authorization = 'Authorization';
+$scope = 'scope';
+// key-value map for optional form parameters
+$formParams = array('key' => 'value');
 
-$result = $pet->findPetsByStatus($status);
+
+$result = $oAuthAuthorization->createRequestToken3($authorization, $scope, $formParams);
 
 ```
 
@@ -879,43 +687,8 @@ $result = $pet->findPetsByStatus($status);
 
 | Error Code | Error Description |
 |------------|-------------------|
-| 400 | Invalid status value |
-
-
-
-### <a name="update_pet"></a>![Method: ](https://apidocs.io/img/method.png ".PetController.updatePet") updatePet
-
-> Update an existing pet
-
-
-```php
-function updatePet($body)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| body |  ``` Required ```  | Pet object that needs to be added to the store |
-
-
-
-#### Example Usage
-
-```php
-$body = new Pet();
-
-$pet->updatePet($body);
-
-```
-
-#### Errors
-
-| Error Code | Error Description |
-|------------|-------------------|
-| 400 | Invalid ID supplied |
-| 404 | Pet not found |
-| 405 | Validation exception |
+| 400 | OAuth 2 provider returned an error. |
+| 401 | OAuth 2 provider says client authentication failed. |
 
 
 
