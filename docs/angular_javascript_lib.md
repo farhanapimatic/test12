@@ -94,18 +94,11 @@ Import the reference to the generated SDK files inside your html file like:
     <!-- API Controllers -->
     <script src="scripts/BibcodeQueryLib/Controllers/BaseController.js"></script>
     <script src="scripts/BibcodeQueryLib/Controllers/BibcodeQueryBindingController.js"></script>
-    <script src="scripts/BibcodeQueryLib/Controllers/OAuthAuthorizationController.js"></script>
 
 
     <!-- Models -->
     <script src="scripts/BibcodeQueryLib/Models/BaseModel.js"></script>
     <script src="scripts/BibcodeQueryLib/Models/ReturnBibcode.js"></script>
-    <script src="scripts/BibcodeQueryLib/Models/OAuthScopeEnum.js"></script>
-    <script src="scripts/BibcodeQueryLib/Models/OAuthToken.js"></script>
-    <script src="scripts/BibcodeQueryLib/Models/OAuthProviderErrorEnum.js"></script>
-    <script src="scripts/BibcodeQueryLib/Models/OAuthScopeEnum.js"></script>
-    <script src="scripts/BibcodeQueryLib/Models/OAuthToken.js"></script>
-    <script src="scripts/BibcodeQueryLib/Models/OAuthProviderErrorEnum.js"></script>
 
     ...
 </head>
@@ -164,170 +157,8 @@ var app = angular.module('myApp', [BibcodeQueryLib]);
 // now controllers/services can be created which import
 // the factories provided by the sdk
 ```
-### Authentication
-In order to setup authentication and initialization of the Angular App, you need the following information.
+### 
 
-| Parameter | Description |
-|-----------|-------------|
-| oAuthClientId | OAuth 2 Client ID |
-| oAuthClientSecret | OAuth 2 Client Secret |
-
-
-
-```JavaScript
-var app = angular.module('myApp', [BibcodeQueryLib]);
-app.factory('config', function($scope, Configuration) 
-{
-    return {
-        setConfigVars: function() {
-            // Configuration parameters and credentials
-            Configuration.oAuthClientId = 'oAuthClientId'; // OAuth 2 Client ID
-            Configuration.oAuthClientSecret = 'oAuthClientSecret'; // OAuth 2 Client Secret
-            
-        }
-    };
-});
-```
-
-You must now authorize the client.
-
-### Authorizing your client
-
-
-This SDK uses *OAuth 2.0 authorization* to authorize the client.
-
-The `authorize()` method will exchange the OAuth client credentials for an *access token*.
-The access token is an object containing information for authorizing client requests.
-
- You must pass the *[scopes](#scopes)* for which you need permission to access.
-```JavaScript
-var app = angular.module('OAuthTest', ['BibcodeQueryLib']);
-
-app.controller('oauthClientController', function($scope, OAuthManager, OAuthScopeEnum) {
-    var scopes = [OAuthScopeEnum.FDG, OAuthScopeEnum.DFG];
-    var promise = OAuthManager.authorize(scopes);
-    promise.then(function(success) {
-        // client successfully authorized
-    });
-});
-```
-
-The client can now make authorized endpoint calls.
-
-
-
-### Scopes
-
-Scopes enable your application to only request access to the resources it needs while enabling users to control the amount of access they grant to your application. Available scopes are defined in the `BibcodeQueryLib/Models/OAuthScopeEnum` enumeration.
-
-| Scope Name | Description |
-| --- | --- |
-| `FDG` |  |
-| `DFG` |  |
-
-
-
-
-### Creating a client from an existing token
-
-To authorize a client from an existing access token, just set the access token in `Configuration` along with the other configuration parameters:
-
-```JavaScript
-var app = angular.module('OAuthTest', ['BibcodeQueryLib']);
-
-app.controller('config', function($scope, Configuration) {
-    Configuration.oAuthToken = sessionStorage.getItem('token'); // the existing token stored in sessionStorage of browser
-});
-```
-
-
-### Complete example
-In this example, `app.js` will check if the access token has been obtained. If it hasn't been, the client needs to be authorized first.
-After authorization, endpoint calls can be made.
-
-#### `app.js`
-
-```JavaScript
-var app = angular.module('OAuthTest', ['BibcodeQueryLib']);
-
-app.controller('oauthClientController', function($scope, OAuthManager, Configuration, OAuthScopeEnum) {
-    Configuration.oAuthClientId = 'oAuthClientId'; // OAuth 2 Client ID
-    Configuration.oAuthClientSecret = 'oAuthClientSecret'; // OAuth 2 Client Secret
-
-    Configuration.oAuthTokenUpdateCallback = function(token) {
-        sessionStorage.setItem('token', token);
-    }
-
-    if (OAuthManager.isTokenSet()) {
-        // token was already set, make API calls as required
-    } else {
-        // since token is not set, client needs to obtain
-        // an access token first
-        var scopes = [OAuthScopeEnum.FDG, OAuthScopeEnum.DFG];
-        var promise = OAuthManager.authorize(scopes);
-        promise.then(function(success) {
-            // client successfully authorized
-            // make endpoint calls as required
-        });
-    }
-
-});
-```
-
-#### `index.html`
-```html
-<!DOCTYPE html>
-<html>
-
-<head>
-    <title>OAuthTest</title>
-    <meta charset="UTF8">
-
-    <script src="scripts/angular.min.js"></script>
-
-    <script src="scripts/BibcodeQueryLib/Module.js"></script>
-    <script src="scripts/BibcodeQueryLib/Configuration.js"></script>
-    <script src="scripts/BibcodeQueryLib/ModelFactory.js"></script>
-    <script src="scripts/BibcodeQueryLib/ObjectMapper.js"></script>
-    <script src="scripts/BibcodeQueryLib/APIHelper.js"></script>
-    <script src="scripts/BibcodeQueryLib/Servers.js"></script>
-    <script src="scripts/BibcodeQueryLib/Environments.js"></script>
-    <script src="scripts/BibcodeQueryLib/Http/Client/HttpContext.js"></script>
-    <script src="scripts/BibcodeQueryLib/Http/Request/HttpRequest.js"></script>
-    <script src="scripts/BibcodeQueryLib/Http/Response/HttpResponse.js"></script>
-    <script src="scripts/BibcodeQueryLib/Http/Client/RequestClient.js"></script>
-
-    <!-- API Controllers -->
-    <script src="scripts/BibcodeQueryLib/Controllers/BaseController.js"></script>
-    <script src="scripts/BibcodeQueryLib/Controllers/BibcodeQueryBindingController.js"></script>
-    <script src="scripts/BibcodeQueryLib/Controllers/OAuthAuthorizationController.js"></script>
-
-
-    <!-- Models -->
-    <script src="scripts/BibcodeQueryLib/Models/BaseModel.js"></script>
-    <script src="scripts/BibcodeQueryLib/Models/ReturnBibcode.js"></script>
-    <script src="scripts/BibcodeQueryLib/Models/OAuthScopeEnum.js"></script>
-    <script src="scripts/BibcodeQueryLib/Models/OAuthToken.js"></script>
-    <script src="scripts/BibcodeQueryLib/Models/OAuthProviderErrorEnum.js"></script>
-    <script src="scripts/BibcodeQueryLib/Models/OAuthScopeEnum.js"></script>
-    <script src="scripts/BibcodeQueryLib/Models/OAuthToken.js"></script>
-    <script src="scripts/BibcodeQueryLib/Models/OAuthProviderErrorEnum.js"></script>
-
-
-    <script src="scripts/BibcodeQueryLib/OAuthManager.js"></script>
-    <script src="scripts/app.js"></script>
-
-</head>
-
-
-<body ng-app="OAuthTest">
-    <div ng-controller="oauthClientController">
-
-    </div>
-</body>
-
-</html>
-```
 
 
 
@@ -336,7 +167,6 @@ app.controller('oauthClientController', function($scope, OAuthManager, Configura
 ## <a name="list_of_controllers"></a>List of Controllers
 
 * [BibcodeQueryBindingController](#bibcode_query_binding_controller)
-* [OAuthAuthorizationController](#o_auth_authorization_controller)
 
 ## <a name="bibcode_query_binding_controller"></a>![Class: ](https://apidocs.io/img/class.png ".BibcodeQueryBindingController") BibcodeQueryBindingController
 
@@ -392,129 +222,6 @@ function getBibcode(bibcode, dbKey, dataType)
 
 	});
 ```
-
-
-
-[Back to List of Controllers](#list_of_controllers)
-
-## <a name="o_auth_authorization_controller"></a>![Class: ](https://apidocs.io/img/class.png ".OAuthAuthorizationController") OAuthAuthorizationController
-
-### Get singleton instance
-
-The singleton instance of the ``` OAuthAuthorizationController ``` class can be accessed via Dependency Injection.
-
-```js
-	app.controller("testController", function($scope, OAuthAuthorizationController, OAuthToken){
-	});
-```
-
-### <a name="create_request_token"></a>![Method: ](https://apidocs.io/img/method.png ".OAuthAuthorizationController.createRequestToken") createRequestToken
-
-> *Tags:*  ``` Skips Authentication ``` 
-
-> Create a new OAuth 2 token.
-
-
-```javascript
-function createRequestToken(authorization, scope, formParams)
-```
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| authorization |  ``` Required ```  | Authorization header in Basic auth format |
-| scope |  ``` Optional ```  | Requested scopes as a space-delimited list. |
-| fieldParameters | ``` Optional ``` | Additional optional form parameters are supported by this method |
-
-
-
-#### Example Usage
-
-```javascript
-
-
-	app.controller("testController", function($scope, OAuthAuthorizationController, OAuthToken){
-        var authorization = 'Authorization';
-        var scope = 'scope';
-    // key-value map for optional form parameters
-    var formParams = [];
-
-
-		var result = OAuthAuthorizationController.createRequestToken(authorization, scope, formParams);
-        //Function call returns a promise
-        result.then(function(success){
-			//success case
-			//getting context of response
-			console.log(success.getContext());
-		},function(err){
-			//failure case
-		});
-
-	});
-```
-
-#### Errors
-
-| Error Code | Error Description |
-|------------|-------------------|
-| 400 | OAuth 2 provider returned an error. |
-| 401 | OAuth 2 provider says client authentication failed. |
-
-
-
-
-### <a name="create_request_token"></a>![Method: ](https://apidocs.io/img/method.png ".OAuthAuthorizationController.createRequestToken") createRequestToken
-
-> *Tags:*  ``` Skips Authentication ``` 
-
-> Create a new OAuth 2 token.
-
-
-```javascript
-function createRequestToken(authorization, scope, formParams)
-```
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| authorization |  ``` Required ```  | Authorization header in Basic auth format |
-| scope |  ``` Optional ```  | Requested scopes as a space-delimited list. |
-| fieldParameters | ``` Optional ``` | Additional optional form parameters are supported by this method |
-
-
-
-#### Example Usage
-
-```javascript
-
-
-	app.controller("testController", function($scope, OAuthAuthorizationController, OAuthToken){
-        var authorization = 'Authorization';
-        var scope = 'scope';
-    // key-value map for optional form parameters
-    var formParams = [];
-
-
-		var result = OAuthAuthorizationController.createRequestToken(authorization, scope, formParams);
-        //Function call returns a promise
-        result.then(function(success){
-			//success case
-			//getting context of response
-			console.log(success.getContext());
-		},function(err){
-			//failure case
-		});
-
-	});
-```
-
-#### Errors
-
-| Error Code | Error Description |
-|------------|-------------------|
-| 400 | OAuth 2 provider returned an error. |
-| 401 | OAuth 2 provider says client authentication failed. |
-
 
 
 
